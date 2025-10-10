@@ -1,0 +1,318 @@
+// Clean rebuild: Personal Portfolio (React + Tailwind) — Indigo theme
+// This version is simplified to ensure preview works.
+// Place PDFs (resume.pdf, intern-summary.pdf, meeting-minutes-sop.pdf) in the same folder when deploying.
+
+export default function Portfolio() {
+  const nav = [
+    { id: "about", label: "About" },
+    { id: "internships", label: "Internships" },
+    { id: "experience", label: "Experience" },
+    { id: "skills", label: "Skills" },
+    { id: "insights", label: "Key Insights" },
+    { id: "resources", label: "Resources" },
+    { id: "contact", label: "Contact" },
+  ];
+
+  const internships = [
+    {
+      company: "IntelliPro Group / QBay (Remote)",
+      title: "Marketing & Business Development Intern",
+      period: "Sep 2025–Present",
+      bullets: [
+        "Unified Marketing Ops Handbook & SOPs; ~30% faster onboarding.",
+        "Event assets (agenda posters, speaker sheets, venue maps) for 3+ partner events.",
+        "A/B tested internal visuals; 35+ downloads & org‑wide adoption.",
+        "Prospect DB (company → decision‑maker) + LinkedIn cold outreach → +200 qualified leads.",
+      ],
+      tags: ["Playbooks", "Design", "Lead Gen", "SOP"],
+    },
+    {
+      company: "GlobalFoundries (Shanghai)",
+      title: "Account Manager & Marketing Intern",
+      period: "May–Aug 2025",
+      bullets: [
+        "Coordinated MPW cycles across 3 channel partners; 5+ follow‑ups/cycle; ~15% delay reduction.",
+        "20+ cross‑functional syncs (QBRs, sales reviews, customer sessions) → ~20% faster issue resolution.",
+        "ICDIA Expo prospecting: 8–9 leads; 4 qualified evaluations.",
+        "Wafer pricing proposals & CSR ops across 20+ SKUs (quotation, RMA, fab ops).",
+      ],
+      tags: ["Semiconductor", "MPW", "CRM", "Pricing"],
+    },
+    {
+      company: "Sleepless Hamster (Madison, WI)",
+      title: "Founder — D2C eCommerce",
+      period: "Feb 2024–Present",
+      bullets: [
+        "Scaled Xiaohongshu/RED D2C to ¥110,000 revenue with 16K+ engagements & 1.8K followers.",
+        "AI‑enabled workflows (chatbots, templates) cut service time/overhead ~40%.",
+        "SKU optimization via velocity/CTR/feedback → ~25% conversion lift.",
+        "Negotiated 4 OEM suppliers; aligned pricing & inventory for lean ops.",
+      ],
+      tags: ["D2C", "eCommerce", "Automation", "Supply Chain"],
+    },
+  ];
+
+  const experiences = [
+    {
+      company: "UW–Madison | CUSA Promotion Dept.",
+      title: "Chair (20‑member team)",
+      period: "Sep 2024–Present",
+      points: [
+        "Freshman Cruise participation +475% (40→230) via targeted storytelling on RED (Xiaohongshu).",
+        "Avg article views 2K+; partnered with 6+ local businesses.",
+      ],
+    },
+    {
+      company: "Marketing Honorary Society (MKT)",
+      title: "Active Member",
+      period: "Oct 2024 – Oct 2025",
+      points: [
+        "Completed three brand‑focused case projects on audience targeting, ad testing, and positioning.",
+        "Led consumer behavior analysis in team pitch; proposed segmentation via Instagram interaction patterns.",
+        "Contributed to competitive research comparing visual strategy & product listings across TikTok and Amazon.",
+      ],
+    },
+    {
+      company: "Zhishan House — Recruitment Department",
+      title: "President",
+      period: "May 2022 – Aug 2022",
+      points: [
+        "Led 40 members to recruit 120 students; broke the organization’s recruitment record.",
+        "Grew & moderated a 400+ parent‑student community; pioneered content strategy that 4× viewership (1.3K+ peak).",
+      ],
+    },
+    {
+      company: "Frame Design — Eco‑friendly Fashion Brand",
+      title: "Founder",
+      period: "Sep 2023 – Jun 2023",
+      points: [
+        "Led 8 students to design 6 bag styles; identified niche of sophisticated environmentalists.",
+        "Personalized recommendations & social marketing; sold 30+ bags; reached 3K+ TikTok followers.",
+      ],
+    },
+    {
+      company: "TestDaily",
+      title: "TOEFL Teaching Assistant",
+      period: "—",
+      points: [
+        "Delivered 5/5 student‑rated essay feedback; boosted grading efficiency ~30% via standardized rubrics.",
+      ],
+    },
+    {
+      company: "Youth Campus Bullying Forum",
+      title: "Co‑organizer",
+      period: "Mar 2022 – Apr 2022",
+      points: [
+        "Created 3‑hour agenda; invited 6 speakers; led 10 students’ panel prep; engaged 200+ participants; issued certificates.",
+      ],
+    },
+  ];
+
+  const skills = [
+    { group: "CRM & Systems", items: ["Microsoft Dynamics 365", "Kinaxis (cert)", "GPE", "CSR Ops"] },
+    { group: "Analytics & Automation", items: ["Excel (pivots)", "KPI reporting", "Data clean‑up", "Chatbots", "A/B testing"] },
+    { group: "Programming & DB", items: ["Python", "SQL (MySQL, DBeaver)"] },
+    { group: "Marketing", items: ["Content analytics", "Social optimization", "TikTok/RedNote campaigns"] },
+    { group: "Domains", items: ["Semiconductor B2B", "D2C eCommerce", "Supply Chain"] },
+    { group: "Languages", items: ["English", "Mandarin"] },
+  ];
+
+  return (
+    <div className="min-h-screen bg-zinc-50 text-zinc-900">
+      {/* Nav */}
+      <header className="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-indigo-100">
+        <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+          <a href="#home" className="font-semibold tracking-tight text-lg text-indigo-700">Sitong Wang</a>
+          <nav className="hidden md:flex gap-6 text-sm">
+            {nav.map((n) => (
+              <a key={n.id} href={`#${n.id}`} className="hover:text-indigo-700 transition">{n.label}</a>
+            ))}
+          </nav>
+          <div className="flex gap-2">
+            <a href="resume.pdf" className="px-3 py-1.5 rounded-xl border border-indigo-200 hover:bg-indigo-50 text-sm">Download Résumé</a>
+            <a href="mailto:swang2433@wisc.edu" className="px-3 py-1.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-sm">Contact</a>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section id="home" className="mx-auto max-w-6xl px-4 pt-16 pb-10">
+        <div className="grid md:grid-cols-5 gap-8 items-center">
+          <div className="md:col-span-3">
+            <span className="inline-block text-xs uppercase tracking-widest text-indigo-600">IS & Marketing @ UW–Madison</span>
+            <h1 className="mt-2 text-4xl md:text-5xl font-semibold leading-tight tracking-tight">
+              Builder at the intersection of <span className="underline decoration-wavy decoration-indigo-300">tech</span> × <span className="underline decoration-wavy decoration-indigo-300">growth</span>
+            </h1>
+            <p className="mt-4 text-zinc-600 max-w-2xl">
+              I launch student‑led projects, scale D2C experiments, and support B2B marketing ops in semiconductors. Currently double‑majoring in Information Systems & Marketing, graduating 2028.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="#internships" className="px-4 py-2 rounded-2xl bg-indigo-600 text-white hover:bg-indigo-700 text-sm">See Internships</a>
+              <a href="#experience" className="px-4 py-2 rounded-2xl border border-indigo-200 hover:bg-indigo-50 text-sm">Experience</a>
+              <a href="https://www.linkedin.com/in/cathy-sitong-wang/" className="px-4 py-2 rounded-2xl border border-indigo-200 hover:bg-indigo-50 text-sm">LinkedIn</a>
+              <a href="https://www.xiaohongshu.com/user/profile/64f2d8b10000000004026ed9?xsec_token=YBAMdMwACEEWFTg_TBPlcwuKnOrGA9O3ciBAMa1w_WYcw=&xsec_source=app_share&xhsshare=CopyLink&shareRedId=ODpIMkc9Rjo2NzUyOTgwNjY3OTk6SkpC&apptime=1760128929&share_id=b4b4438ed8644127b0e15af6109db92f&exSource=" className="px-4 py-2 rounded-2xl border border-indigo-200 hover:bg-indigo-50 text-sm">小红书店铺</a>
+            </div>
+          </div>
+          <div className="md:col-span-2">
+            <div className="aspect-square rounded-3xl bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-200 shadow-sm flex items-center justify-center">
+              <div className="text-center px-6">
+                <div className="text-6xl">🐹</div>
+                <div className="mt-2 text-sm text-indigo-600">Sleepless Hamster</div>
+                <div className="mt-2 text-xs text-indigo-600">RedNote/Xiaohongshu D2C</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-2xl font-semibold tracking-tight text-indigo-800">About</h2>
+        <p className="mt-4 text-zinc-700 max-w-3xl leading-relaxed">
+          Hi! I’m Sitong (Cathy) — an entrepreneurial marketer and operations generalist. I ship clean systems (SOPs, dashboards), crisp stories (content that converts), and scrappy experiments (outreach, landing pages). I’m exploring roles in <strong>Business Operations / Growth / Product Marketing</strong> across <strong>semiconductor & D2C</strong> ecosystems.
+        </p>
+      </section>
+
+      {/* Experience */}
+      <section id="experience" className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-2xl font-semibold tracking-tight text-indigo-800">Experience</h2>
+        <div className="mt-6 grid md:grid-cols-2 gap-6">
+          {experiences.map((exp) => (
+            <article key={exp.company} className="rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+              <div className="flex items-baseline justify-between gap-4">
+                <div>
+                  <h3 className="font-medium tracking-tight">{exp.company}</h3>
+                  <p className="text-sm text-zinc-600">{exp.title}</p>
+                </div>
+                <span className="text-xs text-indigo-600">{exp.period}</span>
+              </div>
+              <ul className="mt-4 space-y-2 text-sm text-zinc-700 list-disc pl-5">
+                {exp.points.map((p, i) => (
+                  <li key={i}>{p}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Internships */}
+      <section id="internships" className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-2xl font-semibold tracking-tight text-indigo-800">Internships</h2>
+        <div className="mt-6 grid md:grid-cols-3 gap-6">
+          {internships.map((p, i) => (
+            <article key={i} className="rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-lg">
+              <div className="flex items-baseline justify-between gap-4">
+                <div>
+                  <h3 className="font-medium tracking-tight">{p.company}</h3>
+                  <p className="text-sm text-zinc-600">{p.title} • {p.period}</p>
+                </div>
+              </div>
+              <ul className="mt-4 space-y-2 text-sm text-zinc-700 list-disc pl-5">
+                {p.bullets.map((b, j) => (
+                  <li key={j}>{b}</li>
+                ))}
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {p.tags.map((t) => (
+                  <span key={t} className="text-xs px-2 py-1 rounded-full bg-indigo-50 border border-indigo-200">{t}</span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section id="skills" className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-2xl font-semibold tracking-tight text-indigo-800">Skills</h2>
+        <div className="mt-6 grid md:grid-cols-2 gap-6">
+          {skills.map((s) => (
+            <div key={s.group} className="rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+              <h3 className="font-medium tracking-tight">{s.group}</h3>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {s.items.map((it) => (
+                  <span key={it} className="text-xs px-2 py-1 rounded-full bg-indigo-50 border border-indigo-200">{it}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Key Insights */}
+      <section id="insights" className="mx-auto max-w-6xl px-4 pb-4">
+        <h2 className="text-2xl font-semibold tracking-tight text-indigo-800">Key Insights — GlobalFoundries Internship</h2>
+        <div className="mt-4 grid md:grid-cols-2 gap-6">
+          <div className="rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+            <h3 className="font-medium tracking-tight">What I learned</h3>
+            <ul className="mt-3 list-disc pl-5 text-sm text-zinc-700 space-y-2">
+              <li>MPW orchestration: aligning partners, calendars, and pricing to reduce cycle delays.</li>
+              <li>Translating engineering feedback into sales actions improves issue resolution speed.</li>
+              <li>Event prospecting (ICDIA) works when paired with disciplined CRM hygiene and follow‑ups.</li>
+              <li>Templates matter: meeting minutes ➜ repeatable decisions, clear ownership, faster next steps.</li>
+            </ul>
+          </div>
+          <div className="rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm">
+            <h3 className="font-medium tracking-tight">Artifacts</h3>
+            <p className="mt-3 text-sm text-zinc-700">These are lightweight, shareable PDFs:</p>
+            <div className="mt-3 grid gap-3">
+              <a href="intern-summary.pdf" className="inline-flex items-center justify-between rounded-2xl border border-indigo-200 hover:bg-indigo-50 px-4 py-3 text-sm">
+                <span>Intern Summary (GF)</span>
+                <span className="text-xs text-indigo-600">PDF →</span>
+              </a>
+              <a href="meeting-minutes-sop.pdf" className="inline-flex items-center justify-between rounded-2xl border border-indigo-200 hover:bg-indigo-50 px-4 py-3 text-sm">
+                <span>Meeting Minutes SOP</span>
+                <span className="text-xs text-indigo-600">PDF →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resources */}
+      <section id="resources" className="mx-auto max-w-6xl px-4 pb-12">
+        <h2 className="text-2xl font-semibold tracking-tight text-indigo-800">Resources</h2>
+        <div className="mt-6 grid md:grid-cols-3 gap-6">
+          <a href="resume.pdf" className="rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm hover:bg-indigo-50 transition">
+            <h3 className="font-medium tracking-tight text-indigo-800">Résumé (PDF)</h3>
+            <p className="mt-2 text-sm text-zinc-600">One‑page resume with semiconductors B2B + D2C highlights.</p>
+          </a>
+          <a href="intern-summary.pdf" className="rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm hover:bg-indigo-50 transition">
+            <h3 className="font-medium tracking-tight text-indigo-800">Intern Summary (GF)</h3>
+            <p className="mt-2 text-sm text-zinc-600">Cross‑functional meetings, MPW cycles, pricing quotes.</p>
+          </a>
+          <a href="meeting-minutes-sop.pdf" className="rounded-3xl border border-indigo-200 bg-white p-6 shadow-sm hover:bg-indigo-50 transition">
+            <h3 className="font-medium tracking-tight text-indigo-800">Meeting Minutes SOP</h3>
+            <p className="mt-2 text-sm text-zinc-600">Client‑facing templates: new co. collab & business alignment.</p>
+          </a>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="mx-auto max-w-6xl px-4 pb-16">
+        <div className="rounded-3xl border border-indigo-200 bg-white p-8 shadow-sm">
+          <h2 className="text-2xl font-semibold tracking-tight text-indigo-800">Let’s build something</h2>
+          <p className="mt-2 text-zinc-700">Open to Business Ops, Growth/PMM, and startup projects. Based in Madison, WI (CST). Remote‑friendly.</p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <a href="mailto:swang2433@wisc.edu" className="px-4 py-2 rounded-2xl bg-indigo-600 text-white hover:bg-indigo-700 text-sm">Email me</a>
+            <a href="https://cal.com/YOUR_HANDLE" className="px-4 py-2 rounded-2xl border border-indigo-200 hover:bg-indigo-50 text-sm">Book a chat</a>
+            <a href="https://www.linkedin.com/in/cathy-sitong-wang/" className="px-4 py-2 rounded-2xl border border-indigo-200 hover:bg-indigo-50 text-sm">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="mx-auto max-w-6xl px-4 pb-10 text-xs text-zinc-500">
+        <div className="border-t border-indigo-100 pt-6 flex flex-wrap items-center justify-between gap-3">
+          <span>© {new Date().getFullYear()} Sitong Wang</span>
+          <div className="flex items-center gap-4">
+            <a href="#home" className="hover:text-indigo-700">Back to top ↑</a>
+            <span>Made with React & Tailwind</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
