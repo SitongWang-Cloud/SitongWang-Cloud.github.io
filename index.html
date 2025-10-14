@@ -14,12 +14,13 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <!-- Type & tiny style tweaks -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
-  <style>
-    :root{ --display:'Fraunces',serif; --sans:'Plus Jakarta Sans',ui-sans-serif,system-ui; }
-    body{ font-family:var(--sans); }
-    .display{ font-family:var(--display); letter-spacing:-0.01em; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+ <style>
+  :root{ --display:'Fraunces',serif; --sans:'Manrope',ui-sans-serif,system-ui; }
+  body{ font-family:var(--sans); }
+  .display{ font-family:var(--display); letter-spacing:-0.01em; }
+</style>
+</style>
 </head>
 
 <body class="text-zinc-900 bg-gradient-to-b from-sky-50 via-white to-emerald-50">
@@ -172,42 +173,45 @@
           </header>
 
           {/* Hero */}
-          <section id="home" className="relative mx-auto max-w-6xl px-4 pt-16 pb-10">
-            {/* starry micro-dots */}
-            <div className="pointer-events-none absolute -top-8 -left-8 right-0 h-40 opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent)]"
-                 style={{backgroundImage:'radial-gradient(rgba(99,102,241,0.12) 1px, transparent 1.8px)', backgroundSize:'14px 14px'}}></div>
-            {/* subtle diagonal patchwork */}
-            <div className="absolute inset-0 -z-10 opacity-20"
-                 style={{backgroundImage:'repeating-linear-gradient(45deg, rgba(14,165,233,.15) 0 22px, rgba(16,185,129,.12) 22px 44px, rgba(99,102,241,.12) 44px 66px)'}}></div>
+          <section id="home" class="relative mx-auto max-w-6xl px-4 pt-16 pb-12">
+  <!-- 背景点阵/渐变仍保留，可按需删 -->
+  <div class="pointer-events-none absolute -top-8 -left-8 right-0 h-40 opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent)]"
+       style="background-image:radial-gradient(rgba(99,102,241,0.12) 1px, transparent 1.8px);background-size:14px 14px"></div>
 
-            <div className="grid md:grid-cols-12 gap-8 items-center">
-              <div className="md:col-span-7">
-                <span className="inline-block text-xs uppercase tracking-widest text-indigo-600">IS & Marketing @ UW–Madison</span>
-                <h1 className="display mt-2 text-4xl md:text-5xl font-semibold leading-tight">
-                  Building calm systems for growth — in <span className="underline decoration-wavy decoration-indigo-300">semiconductors</span> & <span className="underline decoration-wavy decoration-indigo-300">D2C</span>.
-                </h1>
-                <p className="mt-4 text-zinc-700 max-w-2xl">
-                  I run student projects, scale D2C experiments, and support B2B marketing ops. Double-majoring in Information Systems & Marketing (’28).
-                </p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <a href="#internships" className="px-4 py-2 rounded-2xl bg-indigo-600 text-white hover:bg-indigo-700 text-sm">See Internships</a>
-                  <a href="#experience" className="px-4 py-2 rounded-2xl border border-indigo-200 hover:bg-indigo-50 text-sm">Experience</a>
-                  <a href="https://www.linkedin.com/in/cathy-sitong-wang/" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-2xl border border-indigo-200 hover:bg-indigo-50 text-sm">LinkedIn</a>
-                  <a href="https://www.xiaohongshu.com/user/profile/64f2d8b10000000004026ed9?xsec_token=YBAMdMwACEEWFTg_TBPlcwuKnOrGA9O3ciBAMa1w_WYcw=&xsec_source=app_share&xhsshare=CopyLink&shareRedId=ODpIMkc9Rjo2NzUyOTgwNjY3OTk6SkpC&apptime=1760128929&share_id=b4b4438ed8644127b0e15af6109db92f&exSource=" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-2xl border border-indigo-200 hover:bg-indigo-50 text-sm">Xiaohongshu Shop</a>
-                </div>
-              </div>
-              <div className="md:col-span-5">
-                <div className="rounded-3xl border border-indigo-200 bg-white/70 backdrop-blur p-6 shadow-sm">
-                  <div className="text-sm text-indigo-700 font-medium">Now</div>
-                  <ul className="mt-2 text-sm text-zinc-700 space-y-2">
-                    <li>• IntelliPro: playbooks, A/B visuals, lead gen.</li>
-                    <li>• D2C (RED): SKU optimization & ops automation.</li>
-                    <li>• Exploring: Growth / PMM / BizOps roles.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
+  <div class="grid md:grid-cols-12 gap-8 items-center">
+    <div class="md:col-span-5">
+      <div class="rounded-3xl border border-indigo-200 bg-white/70 backdrop-blur p-3 shadow-sm">
+        <img src="portrait.jpg" alt="Sitong Wang portrait"
+             class="w-full aspect-[4/5] object-cover rounded-2xl"/>
+      </div>
+    </div>
+
+     
+    <div class="md:col-span-7">
+      <span class="inline-block text-xs uppercase tracking-widest text-indigo-600">IS &amp; Marketing @ UW–Madison</span>
+      <h1 class="display mt-2 text-5xl md:text-6xl font-semibold leading-tight">
+        Sitong Wang
+      </h1>
+
+      <p class="mt-4 text-zinc-700 text-[15px] leading-7">
+        <strong>Now:</strong> IntelliPro (SV), Marketing &amp; BD intern. Lead cross-functional campaigns; write SOPs/playbooks; align marketing ↔ sales.<br/>
+        <strong>Before:</strong> GlobalFoundries, Account Manager &amp; Marketing Intern. Partnered with sales/pricing/engineering; improved data hygiene; faster quoting.<br/>
+        <strong>Builder:</strong> Sleepless Hamster founder. 0 → 16K+ engagements; ¥110K+ revenue; short-form content + suppliers + rapid iteration.<br/>
+        <strong>Focus:</strong> Tech-driven B2B, e-commerce, data-backed growth. Set direction. Build systems. Rally people. Ship.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#internships" class="px-4 py-2 rounded-2xl bg-indigo-600 text-white hover:bg-indigo-700 text-sm">See Internships</a>
+        <a href="#experience" class="px-4 py-2 rounded-2xl border border-indigo-200 hover:bg-indigo-50 text-sm">Experience</a>
+        <a href="https://www.linkedin.com/in/cathy-sitong-wang/" target="_blank" rel="noreferrer"
+           class="px-4 py-2 rounded-2xl border border-indigo-200 hover:bg-indigo-50 text-sm">LinkedIn</a>
+        <a href="https://www.xiaohongshu.com/user/profile/64f2d8b10000000004026ed9?xsec_token=YBAMdMwACEEWFTg_TBPlcwuKnOrGA9O3ciBAMa1w_WYcw=&xsec_source=app_share&xhsshare=CopyLink&shareRedId=ODpIMkc9Rjo2NzUyOTgwNjY3OTk6SkpC&apptime=1760128929&share_id=b4b4438ed8644127b0e15af6109db92f&exSource="
+           target="_blank" rel="noreferrer"
+           class="px-4 py-2 rounded-2xl border border-indigo-200 hover:bg-indigo-50 text-sm">Rednotes Shop (e-commerce)</a>
+      </div>
+    </div>
+  </div>
+</section>
 
           {/* About */}
           <section id="about" className="mx-auto max-w-6xl px-4 py-12">
